@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>行列式的计算</title>
+      <link href="/2024/04/27/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97/"/>
+      <url>/2024/04/27/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="行列式的计算"><a href="#行列式的计算" class="headerlink" title="行列式的计算"></a>行列式的计算</h1><p><img src="https://sfile.chatglm.cn/chatglm4/9f911959-ec20-4936-95f6-c1dc045e34ba.png?image_process=format,webp"></p><hr><h2 id="计算行列式的方法"><a href="#计算行列式的方法" class="headerlink" title="计算行列式的方法"></a>计算行列式的方法</h2><p><img src="https://sfile.chatglm.cn/chatglm4/640c3464-5aa8-403c-9244-d10034fdacfc.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/af770304-79ef-40ef-9753-1a5074a58eaf.png?image_process=format,webp"></p><h3 id="行（列）相等型"><a href="#行（列）相等型" class="headerlink" title="行（列）相等型"></a>行（列）相等型</h3><p><img src="https://sfile.chatglm.cn/chatglm4/cbbf38cd-0ea3-43e3-b33d-482932f705d3.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/4bc14cdc-6ef3-4833-9cda-e4c5a4a10099.png?image_process=format,webp"></p><h3 id="爪型行列式"><a href="#爪型行列式" class="headerlink" title="爪型行列式"></a>爪型行列式</h3><p><img src="https://sfile.chatglm.cn/chatglm4/4e1da424-6d01-4352-8543-5aa179a9e21e.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/a420f8c7-8e54-447b-af49-4c3a0be987f6.png?image_process=format,webp"></p><h3 id="矩阵分块行列式"><a href="#矩阵分块行列式" class="headerlink" title="矩阵分块行列式"></a>矩阵分块行列式</h3><p><img src="https://sfile.chatglm.cn/chatglm4/d6b82b23-9cc3-415f-9b64-2a275859da92.png"></p><p><img src="https://sfile.chatglm.cn/chatglm4/e8348e3d-901e-4ad9-b79d-6678755f39e1.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/2da3a85e-cee9-4a44-805b-afe61098a4a8.png?image_process=format,webp"></p><h2 id="行列式展开定理计算行列式"><a href="#行列式展开定理计算行列式" class="headerlink" title="行列式展开定理计算行列式"></a>行列式展开定理计算行列式</h2><h3 id="加边法"><a href="#加边法" class="headerlink" title="加边法"></a>加边法</h3><p><img src="https://sfile.chatglm.cn/chatglm4/632671bc-7c52-4431-bd75-62f9f00300c0.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/d3bcaa7a-9557-4cb7-acd4-054f5751a13a.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/7735a91d-5530-4a69-960d-f2621b40a3b2.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/555a14ce-c2b7-4c65-9cbd-a300e5a5243f.png?image_process=format,webp"></p><h3 id="么型行列式"><a href="#么型行列式" class="headerlink" title="么型行列式"></a>么型行列式</h3><p><img src="https://sfile.chatglm.cn/chatglm4/706cb89b-d47e-45fb-b900-faf5223bf78b.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/93620dd7-0e55-45c8-9313-2c35cc2c3547.png?image_process=format,webp"></p><h3 id="川型行列式"><a href="#川型行列式" class="headerlink" title="川型行列式"></a>川型行列式</h3><p><img src="https://sfile.chatglm.cn/chatglm4/57f3c4d7-9486-4836-a66c-2d41409ccb11.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/9a7d7850-f4f2-4011-8312-386a04bc6471.png?image_process=format,webp"></p><h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><p><img src="https://sfile.chatglm.cn/chatglm4/bd67501c-254b-4cb2-9962-4f6beeaed3e4.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/08f8e944-1402-47de-bb91-6f05b3aee4d1.png?image_process=format,webp"></p><hr><h2 id="用矩阵表示行列式"><a href="#用矩阵表示行列式" class="headerlink" title="用矩阵表示行列式"></a>用矩阵表示行列式</h2><p><img src="https://sfile.chatglm.cn/chatglm4/95c6c9f7-8ef6-4ebd-8eb9-1517aa7688d8.png?image_process=format,webp"></p><hr><p><img src="https://sfile.chatglm.cn/chatglm4/3f85fbce-5487-4f81-82ad-e724e0d804d8.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 行列式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>三重积分</title>
       <link href="/2024/04/26/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86/"/>
       <url>/2024/04/26/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86/</url>
