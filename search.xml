@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>三重积分</title>
+      <link href="/2024/04/26/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86/"/>
+      <url>/2024/04/26/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="三重积分的计算"><a href="#三重积分的计算" class="headerlink" title="三重积分的计算"></a>三重积分的计算</h1><hr><h2 id="先一后二"><a href="#先一后二" class="headerlink" title="先一后二"></a>先一后二</h2><p>$I &#x3D; {\int\int\int }_{\Omega}f(x, y, z)d_v$</p><ol><li>D（投影区域）：联立消z</li><li>下表面：$z &#x3D; z_1(x, y)$</li><li>上表面：$z &#x3D; z_2(x, y)$</li></ol><p>$I &#x3D; \int\int_D dxdy \int_{z_1(x,y)}^{z_2(x, y)}f{(x,y,z)}d_z$</p><p><img src="https://sfile.chatglm.cn/chatglm4/fc498e95-346b-49f9-a384-d7a0a3ac7067.png?image_process=format,webp"></p><hr><h2 id="柱面坐标"><a href="#柱面坐标" class="headerlink" title="柱面坐标"></a>柱面坐标</h2><ol><li><p>D（投影区域）：联立消z</p></li><li><p>下表面：$z &#x3D; z_1(x, y)$</p></li><li><p>上表面：$z &#x3D; z_2(x, y)$</p></li></ol><p>在柱面坐标里，</p><ol><li>D—&gt;$\alpha\leq\theta\leq\beta$  $P_{1}(\theta)\leq\rho\leq P_{2}(\theta)$​</li><li>$z &#x3D; z_1(x, y)$—&gt;$z_1(\rho_1, \theta)$</li><li>$z &#x3D; z_2(x, y)$—&gt;$z_2(\rho_2, \theta)$</li></ol><p>转化方法：</p><p>$\begin{cases}   x&#x3D;\rho\cos\theta \    y&#x3D;\rho\sin\theta \end{cases}$</p><p>结果表示：<br>$I&#x3D;\int_{\alpha}^{\beta}d\theta\int_{\rho_{1}(\theta)}^{\rho_{2}(\theta)}\rho\cdot d\rho\cdot\int_{z(\rho,\theta)}^{z(\rho,\theta)}f(\rho cos\theta,\rho sin\theta,z)dz$</p><hr><h2 id="先二后一"><a href="#先二后一" class="headerlink" title="先二后一"></a>先二后一</h2><p>$c\leq z \leq  d$</p><p>$\int\int\int_{\Omega} fdv$ &#x3D; $\int_c^d dz \iint_{D_z} f(x,y,z)\cdot dxdy$</p><p><img src="https://sfile.chatglm.cn/chatglm4/42d25a71-7e0d-4523-9a3c-287e93a8b5fc.png?image_process=format,webp"></p><hr><h3 id="eg1"><a href="#eg1" class="headerlink" title="eg1:"></a>eg1:</h3><p>求$\ I&#x3D;\int \int\int_\Omega xdv $ : Ω由三个坐标面及平面x+2y+z&#x3D;1围成</p><p><img src="https://sfile.chatglm.cn/chatglm4/5ff0e801-da60-4329-999e-4f4268ed486e.png?image_process=format,webp" alt="img"></p><h3 id="eg2"><a href="#eg2" class="headerlink" title="eg2:"></a>eg2:</h3><p>求$\int \int\int_{\Omega }z\cdot dv ，\Omega $由$z&#x3D;x^{2}+y^{2}及z&#x3D;4$围成</p><p><img src="https://sfile.chatglm.cn/img2text/9703be5a-9a1a-42e5-b2b3-bd42c8592df5.jpg"></p><p>要计算三重积分 $\int \int \int_{\Omega} z , dv$，其中 $\Omega$ 由曲面 $z &#x3D; x^2 + y^2$ 和平面 $z &#x3D; 4$ 围成，我们可以按照以下步骤进行：</p><ol><li><p><strong>确定积分区域</strong>：首先，我们需要确定积分区域 $\Omega$。由于区域由曲面 $z &#x3D; x^2 + y^2$ 和平面 $z &#x3D; 4$ 围成，我们可以推断积分区域是在这两个曲面之间的空间区域。</p></li><li><p><strong>设置积分限</strong>：接下来，我们需要为每个变量设置积分限。由于这是一个三维积分，我们需要为 $x$、$y$ 和 $z$ 分别设置积分限。</p><ul><li><p>对于 $x$ 和 $y$，积分限将是由曲面 $z &#x3D; x^2 + y^2$ 和 $z &#x3D; 4$ 在 $xy$ 平面上投影形成的区域。这个区域是一个圆，半径为 2（因为当 $z &#x3D; 4$ 时，$x^2 + y^2 &#x3D; 4$）。</p></li><li><p>对于 $z$，积分限是从 $z &#x3D; x^2 + y^2$ 到 $z &#x3D; 4$。</p></li></ul></li><li><p><strong>写出积分表达式</strong>：积分表达式将是 $\int \int \int_{\Omega} z , dv$，其中 $dv$ 是体积元素，可以表示为 $dz , dy , dx$。</p></li><li><p><strong>进行积分</strong>：最后，按照积分限进行积分计算。<br>  用数学符号表示，积分表达式将是：</p></li></ol><p>  $\int_{-2}^{2}\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\int_{x^2+y^2}^4z\mathrm{d}z\mathrm{d}y\mathrm{d}x$   </p><ul><li>法一（先一后二）</li></ul><p>  <img src="https://sfile.chatglm.cn/chatglm4/62a2fe97-259f-4fa3-af98-6e4c51420974.png?image_process=format,webp" alt="img"></p><ul><li>法二   （柱面坐标法）</li></ul><p>  <img src="https://sfile.chatglm.cn/chatglm4/433089d7-c8a8-419f-9226-115a4dc8c576.png?image_process=format,webp" alt="img"></p><ul><li>法三    （先二后一）</li></ul><p>  <img src="https://sfile.chatglm.cn/chatglm4/500cbdc0-10b1-452e-bbc6-0b038ba3f8f1.png?image_process=format,webp"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在计算多重积分时，”先一后二”和”先二后一”是两种不同的积分顺序策略，它们适用于不同类型的积分区域和被积函数。</p><ol><li>先一后二（先算单积分，再算双积分）：<br>这种积分顺序通常适用于积分区域是圆柱形或者可以分解为一维和二维积分的情况。具体来说，就是先对一个变量积分，得到一个关于另外两个变量的函数，然后再对这两个变量进行积分。这种顺序通常在积分区域的边界与一个坐标轴平行时使用，例如：</li></ol><ul><li>当积分区域是由两个垂直于x轴的平面和两个垂直于y轴的曲线围成的区域时，可以先对x积分，再对y积分。</li><li>当积分区域是圆柱形时，比如在柱坐标下，可以先对半径r积分，再对角度θ和高度z积分。</li></ul><ol start="2"><li>先二后一（先算双积分，再算单积分）：<br>这种积分顺序通常适用于积分区域是矩形或者可以分解为二维和一维积分的情况。具体来说，就是先对两个变量进行积分，得到一个关于第三个变量的函数，然后再对这个变量进行积分。这种顺序通常在积分区域的边界与坐标轴垂直时使用，例如：</li></ol><ul><li>当积分区域是由两个垂直于x轴的曲线和两个垂直于y轴的平面围成的区域时，可以先对y和z积分，再对x积分。</li><li>当积分区域是由两个垂直于x轴的平面和两个垂直于z轴的曲线围成的区域时，可以先对x和z积分，再对y积分。<br>在实际计算中，选择哪种积分顺序取决于积分区域的形状和被积函数的特点。通常，我们会选择一种使得积分计算尽可能简单和直接的顺序。如果可能的话，可以尝试不同的积分顺序，看哪种方式更容易计算。此外，积分区域的对称性和被积函数的性质（如奇偶性）也可以帮助我们选择最合适的积分顺序。</li></ul><p>同时计算三重积分时应注意的几点：</p><ol><li>选择合适的积分顺序：三重积分的积分顺序可以是 dxdydz、dydxdz、dzdxdy、dxdzdy、dydzdx 或 dzdydx。选择正确的积分顺序可以简化计算过程。通常，我们应该选择使被积函数尽可能简单的顺序。</li><li>确定积分限：在计算三重积分时，需要确定积分的上下限。这些限通常由积分区域的边界决定。正确确定积分限对于计算正确的结果至关重要。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 积分学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Typora 语法大全</title>
       <link href="/2024/04/26/Typora%20%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/"/>
       <url>/2024/04/26/Typora%20%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</url>
