@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>逆矩阵</title>
+      <link href="/2024/04/27/%E9%80%86%E7%9F%A9%E9%98%B5/"/>
+      <url>/2024/04/27/%E9%80%86%E7%9F%A9%E9%98%B5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h1><p><img src="https://sfile.chatglm.cn/chatglm4/159c7294-47f5-45e5-9ab3-f2931cc6dccf.png?image_process=format,webp"></p><hr><h2 id="啥是逆矩阵？"><a href="#啥是逆矩阵？" class="headerlink" title="啥是逆矩阵？"></a>啥是逆矩阵？</h2><p><img src="https://sfile.chatglm.cn/chatglm4/ec8d7a8d-47fa-4e6c-a67f-a5d7ce5bcc28.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/e4723ee7-073d-4487-bb6f-669699db7c0e.png?image_process=format,webp"></p><h2 id="逆矩阵咋求？"><a href="#逆矩阵咋求？" class="headerlink" title="逆矩阵咋求？"></a>逆矩阵咋求？</h2><h3 id="具体矩阵的逆矩阵的求法"><a href="#具体矩阵的逆矩阵的求法" class="headerlink" title="具体矩阵的逆矩阵的求法"></a>具体矩阵的逆矩阵的求法</h3><p><img src="https://sfile.chatglm.cn/chatglm4/ba9eb4ff-be59-41a9-804c-1b6d74df88bc.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/a9f85afe-e205-4667-bbd7-f57256461778.png?image_process=format,webp"></p><h3 id="抽象矩阵的逆矩阵的求法"><a href="#抽象矩阵的逆矩阵的求法" class="headerlink" title="抽象矩阵的逆矩阵的求法"></a>抽象矩阵的逆矩阵的求法</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 矩阵 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>矩阵及其运算</title>
+      <link href="/2024/04/27/%E7%9F%A9%E9%98%B5%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/"/>
+      <url>/2024/04/27/%E7%9F%A9%E9%98%B5%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="矩阵及其运算"><a href="#矩阵及其运算" class="headerlink" title="矩阵及其运算"></a>矩阵及其运算</h1><p><img src="https://sfile.chatglm.cn/chatglm4/80215fef-cd59-4974-99f7-a98b1a722cd8.png?image_process=format,webp"></p><hr><h2 id="矩阵是个啥？"><a href="#矩阵是个啥？" class="headerlink" title="矩阵是个啥？"></a>矩阵是个啥？</h2><p><img src="https://sfile.chatglm.cn/chatglm4/85eb4cd7-131a-465c-a7d4-e5d2780c43e9.png?image_process=format,webp"></p><h2 id="矩阵与行列式的关系"><a href="#矩阵与行列式的关系" class="headerlink" title="矩阵与行列式的关系"></a>矩阵与行列式的关系</h2><p><img src="https://sfile.chatglm.cn/chatglm4/7b922d5c-d842-42b7-b9b7-1c87bce05ff7.png?image_process=format,webp"></p><h2 id="矩阵的同型和相等"><a href="#矩阵的同型和相等" class="headerlink" title="矩阵的同型和相等"></a>矩阵的同型和相等</h2><p><img src="https://sfile.chatglm.cn/chatglm4/1b3ba54c-08d5-49d0-bcec-18ee01619e2c.png?image_process=format,webp"></p><hr><h2 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h2><h3 id="加减法"><a href="#加减法" class="headerlink" title="加减法"></a>加减法</h3><p><img src="https://sfile.chatglm.cn/chatglm4/4825d857-b0be-49c5-89e4-b53b6317dc61.png?image_process=format,webp"></p><h3 id="数与矩阵相乘"><a href="#数与矩阵相乘" class="headerlink" title="数与矩阵相乘"></a>数与矩阵相乘</h3><p><img src="https://sfile.chatglm.cn/chatglm4/e3df807b-283b-4a00-b713-fe56c0536381.png?image_process=format,webp"></p><h3 id="矩阵与矩阵相乘"><a href="#矩阵与矩阵相乘" class="headerlink" title="矩阵与矩阵相乘"></a>矩阵与矩阵相乘</h3><p><img src="https://sfile.chatglm.cn/chatglm4/12faf5c9-566d-49b5-a365-e2676da380ac.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/f1923748-dfdd-4c82-affd-c269eebbe017.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/c6a6e84e-32ca-401d-b109-a89308ef434d.png?image_process=format,webp"></p><h3 id="矩阵乘法的性质"><a href="#矩阵乘法的性质" class="headerlink" title="矩阵乘法的性质"></a>矩阵乘法的性质</h3><p><img src="https://sfile.chatglm.cn/chatglm4/83da144e-d7cd-4eac-9038-820bf9c61bcc.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/be5c2444-d68e-4825-962f-785aba97f212.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/9544af1f-6867-4a16-a4b4-f2311ab87497.png?image_process=format,webp"></p><hr><h2 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h2><h3 id="八个特殊矩阵"><a href="#八个特殊矩阵" class="headerlink" title="八个特殊矩阵"></a>八个特殊矩阵</h3><p><img src="https://sfile.chatglm.cn/chatglm4/cff3cc02-3755-4e3e-98c3-762fbbca50ae.png?image_process=format,webp"></p><h3 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h3><p><img src="https://sfile.chatglm.cn/chatglm4/b4693bfa-43c2-4c42-ad58-ab6a28a35cf4.png?image_process=format,webp"></p><h3 id="伴随矩阵"><a href="#伴随矩阵" class="headerlink" title="伴随矩阵"></a>伴随矩阵</h3><p><img src="https://sfile.chatglm.cn/chatglm4/92906753-ac9e-4db2-bc72-05ddfc4f7876.png?image_process=format,webp"></p><hr><h2 id="方阵的行列式"><a href="#方阵的行列式" class="headerlink" title="方阵的行列式"></a>方阵的行列式</h2><h3 id="什么是方阵？"><a href="#什么是方阵？" class="headerlink" title="什么是方阵？"></a>什么是方阵？</h3><p>方阵是线性代数中的一个概念，指的是行数和列数相等的矩阵。一个$( m \times n )的矩阵，如果( m &#x3D; n )，则该矩阵是方阵。方阵通常用( n \times n )表示，其中( n )$称为方阵的阶。<br>例如，一个2阶方阵如下所示：<br>$<br>\begin{bmatrix}<br>a &amp; b \<br>c &amp; d<br>\end{bmatrix}<br>$<br>在这个例子中，矩阵有两行两列，因此是一个方阵。</p><h3 id="方阵的性质"><a href="#方阵的性质" class="headerlink" title="方阵的性质"></a>方阵的性质</h3><p><img src="https://sfile.chatglm.cn/chatglm4/762c0098-7120-4c71-81ce-d76b7c60646b.png?image_process=format,webp"></p><hr><p><img src="https://sfile.chatglm.cn/chatglm4/3045e34e-47a9-40db-8731-40c3e213ac59.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 矩阵 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>行列式的计算</title>
       <link href="/2024/04/27/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97/"/>
       <url>/2024/04/27/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97/</url>
