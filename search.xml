@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>初等变换与秩</title>
+      <link href="/2024/04/29/%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%A7%A9/"/>
+      <url>/2024/04/29/%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%A7%A9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="初等变换与秩"><a href="#初等变换与秩" class="headerlink" title="初等变换与秩"></a>初等变换与秩</h1><p><img src="https://sfile.chatglm.cn/chatglm4/b99819db-3def-4927-92fd-65fca57bc912.png?image_process=format,webp"></p><h1 id="什么是初等变换？"><a href="#什么是初等变换？" class="headerlink" title="什么是初等变换？"></a>什么是初等变换？</h1><p>初等矩阵是一种特殊的矩阵，它们与初等行（列）变换密切相关。在矩阵理论中，任何一个矩阵都可以通过一系列的初等行（列）变换转换成行最简形式或列最简形式。这些变换是由初等矩阵来实现的。<br>一个 ( $m \times n $) 的矩阵，如果它只由单位矩阵经过一次初等变换得到，那么这样的矩阵就称为初等矩阵。具体来说，初等矩阵可以分为三类：</p><ol><li><strong>互换两行（两列）的初等矩阵</strong>：将单位矩阵中的任意两行（两列）互换，所得到的矩阵就是这种类型的初等矩阵。</li><li><strong>以非零常数乘以某一行（列）的初等矩阵</strong>：将单位矩阵中的某一行（列）的每一个元素乘以一个非零常数，所得到的矩阵就是这种类型的初等矩阵。</li><li><strong>将一行（列）的某个倍数加到另一行（列）上</strong>：将单位矩阵中的某一行（列）的每个元素乘以一个常数后加到另一行（列）的对应元素上，所得到的矩阵就是这种类型的初等矩阵。</li></ol><p>在矩阵的行最简形式中，每一行的第一个非零数字都是1，且这个1所在的列中其他行的元素都是0。初等矩阵的逆矩阵仍然是初等矩阵，而且初等矩阵的乘积也是初等矩阵。</p><p><img src="https://sfile.chatglm.cn/chatglm4/e7f5d21e-e798-4042-a9ff-2e9ad96c8588.png?image_process=format,webp"></p><h1 id="什么是矩阵等价？"><a href="#什么是矩阵等价？" class="headerlink" title="什么是矩阵等价？"></a>什么是矩阵等价？</h1><p><img src="https://sfile.chatglm.cn/chatglm4/669e3f0d-ce7c-40eb-808e-81403441494f.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/ed191e74-f3ee-4998-bfb3-fb6a511fd58f.png?image_process=format,webp"></p><h1 id="用矩阵乘法表示初等变换"><a href="#用矩阵乘法表示初等变换" class="headerlink" title="用矩阵乘法表示初等变换"></a>用矩阵乘法表示初等变换</h1><p><img src="https://sfile.chatglm.cn/chatglm4/cd25ce14-8d71-4048-850a-01b90dbb84cc.png?image_process=format,webp"></p><h1 id="初等矩阵的逆"><a href="#初等矩阵的逆" class="headerlink" title="初等矩阵的逆"></a>初等矩阵的逆</h1><p><img src="https://sfile.chatglm.cn/chatglm4/9006f81a-4857-4b2a-a0ef-320fa638d532.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 矩阵 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>矩阵的公式</title>
+      <link href="/2024/04/29/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%85%AC%E5%BC%8F/"/>
+      <url>/2024/04/29/%E7%9F%A9%E9%98%B5%E7%9A%84%E5%85%AC%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="矩阵的公式"><a href="#矩阵的公式" class="headerlink" title="矩阵的公式"></a>矩阵的公式</h1><p><img src="https://sfile.chatglm.cn/chatglm4/59e6073f-feae-4a1d-9597-b491d9d21a83.png?image_process=format,webp"></p><hr><h1 id="矩阵公式大总结"><a href="#矩阵公式大总结" class="headerlink" title="矩阵公式大总结"></a>矩阵公式大总结</h1><p><img src="https://sfile.chatglm.cn/chatglm4/ee812a5f-d83b-4569-9eb9-8c35a9480678.png?image_process=format,webp"></p><h2 id="1-操作顺序可交换"><a href="#1-操作顺序可交换" class="headerlink" title="1. 操作顺序可交换"></a>1. 操作顺序可交换</h2><p><img src="https://sfile.chatglm.cn/chatglm4/d7923c78-d0fd-4c23-9496-7f5bc501ad49.png?image_process=format,webp"></p><h2 id="2-整体操作要对调"><a href="#2-整体操作要对调" class="headerlink" title="2. 整体操作要对调"></a>2. 整体操作要对调</h2><p><img src="https://sfile.chatglm.cn/chatglm4/c7956b85-5764-42b5-87f0-b28f16415a12.png?image_process=format,webp"></p><h2 id="3-重复操作会还原"><a href="#3-重复操作会还原" class="headerlink" title="3. 重复操作会还原"></a>3. 重复操作会还原</h2><p><img src="https://sfile.chatglm.cn/chatglm4/a5aa7739-c181-4aff-b3f6-7f5f03e62e72.png?image_process=format,webp"></p><h2 id="4-转置的优良性"><a href="#4-转置的优良性" class="headerlink" title="4. 转置的优良性"></a>4. 转置的优良性</h2><p><img src="https://sfile.chatglm.cn/chatglm4/5ac898cc-c317-46f6-80a8-3248bc293ed6.png?image_process=format,webp"></p><h2 id="5-逆矩阵的定义"><a href="#5-逆矩阵的定义" class="headerlink" title="5. 逆矩阵的定义"></a>5. 逆矩阵的定义</h2><p><img src="https://sfile.chatglm.cn/chatglm4/3530135b-b40d-4722-89ff-b40e10c033e1.png?image_process=format,webp"></p><h2 id="6-伴随矩阵的推导"><a href="#6-伴随矩阵的推导" class="headerlink" title="6. 伴随矩阵的推导"></a>6. 伴随矩阵的推导</h2><p> <img src="https://sfile.chatglm.cn/chatglm4/539ac5ab-dcc1-4e8f-9a92-b19f51619b6a.png?image_process=format,webp"></p><hr><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="https://sfile.chatglm.cn/chatglm4/5e2bf10b-cb2e-444f-95af-4b8c8ab624fa.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/12250f96-cab4-4b3a-8d41-113d07b90b9a.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 矩阵 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二重积分</title>
       <link href="/2024/04/27/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86/"/>
       <url>/2024/04/27/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86/</url>
