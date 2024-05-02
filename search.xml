@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>杨辉三角形</title>
+      <link href="/2024/05/02/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%E5%BD%A2/"/>
+      <url>/2024/05/02/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><p>给定一个非负整数<code>numRows</code>，生成「杨辉三角」的前<code>numRows</code>行。</p><p>在「杨辉三角」中，每个数是它左上方和右上方的数的和。</p><p><img src="https://pic.leetcode-cn.com/1626927345-DZmfxB-PascalTriangleAnimated2.gif" alt="杨辉三角"></p><hr><p><strong>示例 1:</strong></p><p>输入: numRows &#x3D; 5<br>输出: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]</p><p><strong>示例 2:</strong></p><p>输入: numRows &#x3D; 1<br>输出: [[1]]</p><p><strong>提示:</strong></p><p>$1 &lt;&#x3D; numRows &lt;&#x3D; 30$</p><hr><h2 id="初版"><a href="#初版" class="headerlink" title="初版"></a>初版</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个名为Solution的类，用于解决给定问题</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 定义一个名为generate的方法，接收一个整数参数numRows，返回一个整数列表的列表</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate</span>(<span class="params">self, numRows: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span><br><span class="line">        <span class="comment"># 初始化一个名为triangle的二维列表，用于表示杨辉三角</span></span><br><span class="line">        <span class="comment"># triangle的每一行都是一个列表，列表的长度等于当前行号加一</span></span><br><span class="line">        <span class="comment"># 列表的每个元素都是1，因为杨辉三角的每一行的两端都是1</span></span><br><span class="line">        triangle = [[<span class="number">1</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(numRows) <span class="keyword">if</span> i &lt;= j] <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(numRows)]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 遍历杨辉三角的每一行，从第二行开始，因为第一行已经初始化为[1]</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(numRows):</span><br><span class="line">            <span class="comment"># 遍历当前行的每一列，从第一列开始，到当前行号结束</span></span><br><span class="line">            <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(row + <span class="number">1</span>):</span><br><span class="line">                <span class="comment"># 如果当前列是第一列或最后一列，则当前元素为1</span></span><br><span class="line">                <span class="keyword">if</span> col == <span class="number">0</span> <span class="keyword">or</span> col == row:</span><br><span class="line">                    triangle[row][col] = <span class="number">1</span></span><br><span class="line">                <span class="comment"># 否则，当前元素等于上一行的当前列和上一列的和</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    triangle[row][col] = triangle[row - <span class="number">1</span>][col - <span class="number">1</span>] + triangle[row - <span class="number">1</span>][col]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 返回杨辉三角</span></span><br><span class="line">        <span class="keyword">return</span> triangle</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果当前文件是主程序，则执行以下代码</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 创建一个Solution类的实例</span></span><br><span class="line">    s = Solution()</span><br><span class="line">    <span class="comment"># 调用实例的generate方法，生成一个10行的杨辉三角，并打印结果</span></span><br><span class="line">    <span class="built_in">print</span>(s.generate(<span class="number">10</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="优化版"><a href="#优化版" class="headerlink" title="优化版"></a>优化版</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个名为Solution的类，用于解决给定问题</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 定义一个名为generate的方法，接收一个整数参数numRows，返回一个整数列表的列表</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate</span>(<span class="params">self, numRows: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span><br><span class="line">        <span class="comment"># 初始化一个空列表来存储杨辉三角</span></span><br><span class="line">        triangle = []</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 遍历从0到numRows-1的范围，代表杨辉三角的每一行</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(numRows):</span><br><span class="line">            <span class="comment"># 如果是第一行，直接添加[1]作为杨辉三角的第一行</span></span><br><span class="line">            <span class="keyword">if</span> row == <span class="number">0</span>:</span><br><span class="line">                triangle.append([<span class="number">1</span>])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 新的一行是基于上一行的，初始化为上一行的长度加1，所有元素都是1</span></span><br><span class="line">                <span class="comment"># 因为杨辉三角的每一行两端的元素都是1</span></span><br><span class="line">                new_row = [<span class="number">1</span>] * (row + <span class="number">1</span>)</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># 更新新行中的内部元素（除了两端的1）</span></span><br><span class="line">                <span class="comment"># 从第二列开始，到倒数第二列结束</span></span><br><span class="line">                <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, row):</span><br><span class="line">                    <span class="comment"># 杨辉三角的每个元素（除了两端的1）是它上方和左上方两个元素之和</span></span><br><span class="line">                    new_row[col] = triangle[row - <span class="number">1</span>][col - <span class="number">1</span>] + triangle[row - <span class="number">1</span>][col]</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># 将新行添加到杨辉三角中</span></span><br><span class="line">                triangle.append(new_row)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 返回生成的杨辉三角</span></span><br><span class="line">        <span class="keyword">return</span> triangle</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果当前文件是主程序，则执行以下代码</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 创建一个Solution类的实例</span></span><br><span class="line">    s = Solution()</span><br><span class="line">    <span class="comment"># 调用实例的generate方法，生成一个10行的杨辉三角，并打印结果</span></span><br><span class="line">    <span class="built_in">print</span>(s.generate(<span class="number">10</span>))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>长度最小的子数组</title>
       <link href="/2024/05/02/%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/"/>
       <url>/2024/05/02/%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/</url>
@@ -51,9 +76,9 @@
       
         <tags>
             
-            <tag> 双指针 </tag>
-            
             <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -78,11 +103,11 @@
       
         <tags>
             
+            <tag> 双指针 </tag>
+            
             <tag> 字符串 </tag>
             
             <tag> KMP算法 </tag>
-            
-            <tag> 双指针 </tag>
             
         </tags>
       
