@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>汽车价格多元线性回归 | 枫林晚</title><meta name="author" content="枫林晚"><meta name="copyright" content="枫林晚"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="汽车价格多元线性回归">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汽车价格多元线性回归">
+<meta property="og:url" content="https://codersgl.github.io/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
+<meta property="og:site_name" content="枫林晚">
+<meta property="og:description" content="汽车价格多元线性回归">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp">
+<meta property="article:published_time" content="2024-05-05T06:25:16.000Z">
+<meta property="article:modified_time" content="2024-05-05T06:32:06.154Z">
+<meta property="article:author" content="枫林晚">
+<meta property="article:tag" content="线性回归">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://codersgl.github.io/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '汽车价格多元线性回归',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-05 14:32:06'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://files.codelife.cc/wallhaven/full/vq/wallhaven-vqmqrm.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 成就</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp')"><nav id="nav"><span id="blog-info"><a href="/" title="枫林晚"><span class="site-name">枫林晚</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 成就</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">汽车价格多元线性回归</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-05T06:25:16.000Z" title="发表于 2024-05-05 14:25:16">2024-05-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-05T06:32:06.154Z" title="更新于 2024-05-05 14:32:06">2024-05-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="汽车价格多元线性回归"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="汽车价格预测多元线性回归"><a href="#汽车价格预测多元线性回归" class="headerlink" title="汽车价格预测多元线性回归"></a>汽车价格预测多元线性回归</h1><h2 id="关于数据集"><a href="#关于数据集" class="headerlink" title="关于数据集"></a>关于数据集</h2><h3 id="问题陈述"><a href="#问题陈述" class="headerlink" title="问题陈述"></a>问题陈述</h3><p>一家中国汽车公司吉利汽车渴望进入美国市场，在美利建立制造工厂并在当地生产汽车，以与美国和欧洲同行竞争。</p>
+<p>他们与一家汽车咨询公司签订了合同，以了解汽车定价所依赖的因素。具体来说，他们希望了解影响美国市场汽车定价的因素，因为这些因素可能与中国市场有很大不同。公司想知道：</p>
+<p>哪些变量在预测汽车<br>价格方面具有重要意义 这些变量对汽车<br>价格的描述程度 根据各种市场调查，该咨询公司收集了美国市场上不同类型汽车的大量数据集。</p>
+<h3 id="业务目标"><a href="#业务目标" class="headerlink" title="业务目标"></a>业务目标</h3><p>我们需要使用可用的自变量对汽车价格进行建模。管理层将使用它来了解价格如何随自变量而变化。因此，他们可以操纵汽车的设计、商业战略等，以满足一定的价格水平。此外，该模型将是管理层了解新市场定价动态的好方法。</p>
+<hr>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> TensorDataset, DataLoader</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn</span><br><span class="line"><span class="keyword">from</span> torch.optim <span class="keyword">import</span> SGD</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>导入<code>pandas</code>库用于数据处理，<code>torch</code>及其子模块用于构建和训练神经网络，<code>matplotlib.pyplot</code>用于绘制图表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">file_path = <span class="string">r&#x27;D:\ALL_code\al_study_file\al_study\MachineLearning\线性回归\car-price-prediction\CarPrice_Assignment.csv&#x27;</span></span><br><span class="line">batch_size = <span class="number">10</span></span><br><span class="line">num_epochs = <span class="number">100</span></span><br><span class="line">lr = <span class="number">0.001</span></span><br></pre></td></tr></table></figure></li>
+<li><p>设置文件路径<code>file_path</code>，批量大小<code>batch_size</code>，训练轮数<code>num_epochs</code>和学习率<code>lr</code>。这些参数将用于数据加载、模型训练和优化过程。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_arrays = pd.read_csv(file_path)</span><br><span class="line">data_arrays = data_arrays.select_dtypes(include=[<span class="built_in">int</span>, <span class="built_in">float</span>])</span><br></pre></td></tr></table></figure></li>
+<li><p>使用<code>pandas</code>的<code>read_csv</code>函数读取CSV文件，并将数据框<code>data_arrays</code>限制为只包含整数和浮点数类型的列，排除非数值型数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mean = data_arrays.mean()</span><br><span class="line">std = data_arrays.std()</span><br><span class="line">data_arrays = (data_arrays - mean) / std</span><br></pre></td></tr></table></figure></li>
+<li><p>计算每个特征列的均值<code>mean</code>和标准差<code>std</code>，然后对数据进行标准化处理，使得每个特征都具有均值为0和标准差为1的分布，这有助于模型训练的稳定性和效率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">features = data_arrays.drop([<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;car_ID&#x27;</span>], axis=<span class="number">1</span>)</span><br><span class="line">labels = data_arrays[<span class="string">&#x27;price&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p>从数据框中分离出特征<code>features</code>和标签<code>labels</code>。这里，’price’列是我们的标签，即我们要预测的值，而’car_ID’列被排除在外，因为它是一个唯一标识符，对价格预测没有帮助。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">features = torch.tensor(features.values, dtype=torch.float32)</span><br><span class="line">labels = torch.tensor(labels.values, dtype=torch.float32).unsqueeze(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>将特征和标签数据从<code>pandas</code>的<code>DataFrame</code>和<code>Series</code>对象转换为<code>torch</code>的<code>Tensor</code>对象，并将其数据类型设置为<code>float32</code>。标签<code>labels</code>通过<code>unsqueeze</code>方法增加一个维度，使其形状与模型的输出相匹配。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">load_array</span>(<span class="params">data_arrays, batch_size, is_train=<span class="literal">True</span></span>):</span><br><span class="line">    dataset = TensorDataset(*data_arrays)</span><br><span class="line">    <span class="keyword">return</span> DataLoader(dataset, batch_size, shuffle=is_train)</span><br></pre></td></tr></table></figure></li>
+<li><p>定义一个函数<code>load_array</code>，它接受特征和标签的<code>Tensor</code>列表<code>data_arrays</code>，批量大小<code>batch_size</code>，以及一个布尔值<code>is_train</code>。该函数创建一个<code>TensorDataset</code>对象，然后使用它创建一个<code>DataLoader</code>对象，该对象在训练时提供批量数据，并可以选择是否在每次迭代时打乱数据顺序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data_iter = load_array((features, labels), batch_size)</span><br></pre></td></tr></table></figure></li>
+<li><p>调用<code>load_array</code>函数，创建一个<code>DataLoader</code>对象<code>data_iter</code>，用于在训练循环中迭代特征和标签数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LinearRegression</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, input_dim</span>):</span><br><span class="line">        <span class="built_in">super</span>(LinearRegression, self).__init__()</span><br><span class="line">        self.layer = nn.Linear(input_dim, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> self.layer(x)</span><br></pre></td></tr></table></figure></li>
+<li><p>定义一个线性回归模型类<code>LinearRegression</code>，它继承自<code>nn.Module</code>。构造函数<code>__init__</code>接收输入特征的维度<code>input_dim</code>，并创建一个线性层<code>self.layer</code>。前向传播函数<code>forward</code>接收输入<code>x</code>，并通过线性层产生输出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net = LinearRegression(features.shape[<span class="number">1</span>])</span><br><span class="line">net.layer.weight.data.normal_(<span class="number">0</span>, <span class="number">0.01</span>)</span><br><span class="line">net.layer.bias.data.fill_(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>实例化<code>LinearRegression</code>模型<code>net</code>，指定输入特征的维度。然后初始化线性层的权重<code>weight</code>和偏置<code>bias</code>，权重使用正态分布初始化，偏置初始化为0。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">loss = nn.MSELoss()</span><br><span class="line">trainer = SGD(net.parameters(), lr=lr)</span><br></pre></td></tr></table></figure></li>
+<li><p>创建一个均方误差损失函数<code>loss</code>，用于计算模型输出和真实标签之间的差异。然后创建一个随机梯度下降优化器<code>trainer</code>，用于更新模型的参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">loss_history = []</span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(num_epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">        l = loss(net(X), y)</span><br><span class="line">        trainer.zero_grad()</span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()</span><br><span class="line">    l = loss(net(features), labels)</span><br><span class="line">    loss_history.append(l.item())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;epoch <span class="subst">&#123;epoch + <span class="number">1</span>&#125;</span>, loss <span class="subst">&#123;l.item():f&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在每个训练周期（epoch）结束时，打印当前周期的编号和对应的损失值。<code>l.item()</code>用于获取损失值的具体数值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(<span class="built_in">range</span>(<span class="number">1</span>, num_epochs + <span class="number">1</span>), loss_history)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Epoch&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Loss&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Training Loss&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></li>
+<li><p>使用<code>matplotlib.pyplot</code>绘制损失值随训练周期变化的折线图。<code>plt.plot</code>函数用于绘制图形，<code>plt.xlabel</code>和<code>plt.ylabel</code>设置x轴和y轴的标签，<code>plt.title</code>设置图表的标题，最后<code>plt.show()</code>用于显示图表。<br>整个代码块的剩余部分是一个循环，它包含了模型的训练过程：</p>
+</li>
+<li><p><img src="https://sfile.chatglm.cn/chatglm4/654a4fb3-000f-47d8-8714-937776611ff0.png?image_process=format,webp"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(num_epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">        l = loss(net(X), y)</span><br><span class="line">        trainer.zero_grad()</span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()</span><br></pre></td></tr></table></figure></li>
+<li><p>这是一个双层循环，外层循环遍历所有训练周期（<code>num_epochs</code>），内层循环遍历<code>data_iter</code>提供的所有批次数据。对于每个批次，首先计算模型输出和真实标签之间的损失<code>l</code>，然后使用<code>trainer.zero_grad()</code>清空之前的梯度，接着通过<code>l.backward()</code>计算新的梯度，最后通过<code>trainer.step()</code>更新模型的参数。<br>这个循环是训练过程的核心，它重复进行前向传播、计算损失、反向传播和参数更新的步骤，直到达到预定的训练周期数。每次迭代都会更新模型的权重和偏置，使得模型能够更好地拟合训练数据。</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://codersgl.github.io">枫林晚</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://codersgl.github.io/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">https://codersgl.github.io/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://codersgl.github.io" target="_blank">枫林晚</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">线性回归</a></div><div class="post_share"><div class="social-share" data-image="https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%925/" title="训练计划5"><img class="cover" src="https://files.codelife.cc/wallhaven/full/we/wallhaven-we56z6.png?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">训练计划5</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/04/25/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%AE%80%E6%B4%81%E5%AE%9E%E7%8E%B0/" title="线性回归的简单实现"><img class="cover" src="https://files.codelife.cc/wallhaven/full/x8/wallhaven-x87kll.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-25</div><div class="title">线性回归的简单实现</div></div></a></div><div><a href="/2024/04/25/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B/" title="线性回归从零开始"><img class="cover" src="https://files.codelife.cc/wallhaven/full/8o/wallhaven-8o23gk.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-25</div><div class="title">线性回归从零开始</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://files.codelife.cc/wallhaven/full/vq/wallhaven-vqmqrm.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">枫林晚</div><div class="author-info__description">个人博客，分享知识</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" href="https://codersgl.github.io"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/codersgl" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3219388013@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://chatglm.cn/main/alltoolsdetail" target="_blank" title="智谱清言"><i class="fa-solid fa-magnifying-glass" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到枫林晚的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E9%A2%84%E6%B5%8B%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-number">1.</span> <span class="toc-text">汽车价格预测多元线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">1.1.</span> <span class="toc-text">关于数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E9%99%88%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">问题陈述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E7%9B%AE%E6%A0%87"><span class="toc-number">1.1.2.</span> <span class="toc-text">业务目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" title="汽车价格多元线性回归"><img src="https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汽车价格多元线性回归"/></a><div class="content"><a class="title" href="/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" title="汽车价格多元线性回归">汽车价格多元线性回归</a><time datetime="2024-05-05T06:25:16.000Z" title="发表于 2024-05-05 14:25:16">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%925/" title="训练计划5"><img src="https://files.codelife.cc/wallhaven/full/we/wallhaven-we56z6.png?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="训练计划5"/></a><div class="content"><a class="title" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%925/" title="训练计划5">训练计划5</a><time datetime="2024-05-05T03:18:08.000Z" title="发表于 2024-05-05 11:18:08">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%924/" title="训练计划4"><img src="https://files.codelife.cc/wallhaven/full/13/wallhaven-13dv2g.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="训练计划4"/></a><div class="content"><a class="title" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%924/" title="训练计划4">训练计划4</a><time datetime="2024-05-05T02:48:04.000Z" title="发表于 2024-05-05 10:48:04">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%922/" title="训练计划2"><img src="https://files.codelife.cc/wallhaven/full/d5/wallhaven-d5zkmm.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="训练计划2"/></a><div class="content"><a class="title" href="/2024/05/05/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%922/" title="训练计划2">训练计划2</a><time datetime="2024-05-05T02:16:47.000Z" title="发表于 2024-05-05 10:16:47">2024-05-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/04/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%923/" title="训练计划3"><img src="https://files.codelife.cc/wallhaven/full/j5/wallhaven-j5ejwp.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="训练计划3"/></a><div class="content"><a class="title" href="/2024/05/04/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%923/" title="训练计划3">训练计划3</a><time datetime="2024-05-04T09:45:09.000Z" title="发表于 2024-05-04 17:45:09">2024-05-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://files.codelife.cc/wallpaper/wallspic/20240426856744.jpeg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 枫林晚</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
