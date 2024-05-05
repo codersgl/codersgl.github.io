@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>三重积分计算法</title>
+      <link href="/2024/05/05/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E6%B3%95/"/>
+      <url>/2024/05/05/%E4%B8%89%E9%87%8D%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="三重积分计算法"><a href="#三重积分计算法" class="headerlink" title="三重积分计算法"></a>三重积分计算法</h1><p><img src="https://sfile.chatglm.cn/chatglm4/8d51a58e-e4aa-4009-82d0-cb5acebc2327.png?image_process=format,webp"></p><hr><h2 id="如何看懂三重积分"><a href="#如何看懂三重积分" class="headerlink" title="如何看懂三重积分"></a>如何看懂三重积分</h2><p><img src="https://sfile.chatglm.cn/chatglm4/1ff135be-e12d-416a-9584-5cae6f481e12.png?image_process=format,webp"></p><h2 id="用质量理解三重积分"><a href="#用质量理解三重积分" class="headerlink" title="用质量理解三重积分"></a>用质量理解三重积分</h2><p><img src="https://sfile.chatglm.cn/chatglm4/c383fe4b-e741-453a-a379-585db1e147b8.png?image_process=format,webp"></p><h2 id="三重积分的运算性质"><a href="#三重积分的运算性质" class="headerlink" title="三重积分的运算性质"></a>三重积分的运算性质</h2><p><img src="https://sfile.chatglm.cn/chatglm4/25dbd836-6c6f-4a7e-bf2a-0fddde4e1374.png?image_process=format,webp"></p><h2 id="如何计算？"><a href="#如何计算？" class="headerlink" title="如何计算？"></a>如何计算？</h2><p><img src="https://sfile.chatglm.cn/chatglm4/d982e5de-2a65-49c5-a872-19e50ddb9964.png?image_process=format,webp"></p><h2 id="直角坐标系"><a href="#直角坐标系" class="headerlink" title="直角坐标系"></a>直角坐标系</h2><h3 id="先一后二"><a href="#先一后二" class="headerlink" title="先一后二"></a>先一后二</h3><p><img src="https://sfile.chatglm.cn/chatglm4/07bd2d6e-1bbd-4d21-8acd-f371021a1895.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/c5baabd7-3c9d-44c3-89f1-3c6c51066cea.png?image_process=format,webp"></p><h3 id="eg1"><a href="#eg1" class="headerlink" title="eg1"></a>eg1</h3><p><img src="https://sfile.chatglm.cn/chatglm4/4c76f19f-b239-46ab-be53-c0fcaf804762.png?image_process=format,webp"></p><h3 id="先二后一"><a href="#先二后一" class="headerlink" title="先二后一"></a>先二后一</h3><p><img src="https://sfile.chatglm.cn/chatglm4/2701602d-9f29-4e47-b866-5df05770fb80.png?image_process=format,webp"></p><h3 id="eg2"><a href="#eg2" class="headerlink" title="eg2"></a>eg2</h3><p><img src="https://sfile.chatglm.cn/chatglm4/2580f99f-2743-4d5f-80b7-9aaf59dad1fb.png?image_process=format,webp"></p><h2 id="柱面坐标系"><a href="#柱面坐标系" class="headerlink" title="柱面坐标系"></a>柱面坐标系</h2><p><img src="https://sfile.chatglm.cn/chatglm4/f21e2467-9bd2-43e7-a5be-5b11c7bada18.png?image_process=format,webp"></p><h3 id="eg3"><a href="#eg3" class="headerlink" title="eg3"></a>eg3</h3><h4 id="法一"><a href="#法一" class="headerlink" title="法一"></a>法一</h4><p><img src="https://sfile.chatglm.cn/chatglm4/3b0ebe5f-8599-4d6b-86e1-6aa8a1e5c090.png?image_process=format,webp"></p><h4 id="法二"><a href="#法二" class="headerlink" title="法二"></a>法二</h4><p><img src="https://sfile.chatglm.cn/chatglm4/735d0cee-6e62-4966-adad-040e5c09f903.png?image_process=format,webp"></p><h2 id="球面坐标系"><a href="#球面坐标系" class="headerlink" title="球面坐标系"></a>球面坐标系</h2><p><img src="https://sfile.chatglm.cn/chatglm4/514a17a6-6b55-4303-9254-b5a22521024e.png?image_process=format,webp"></p><h3 id="三重积分的轮换对称性"><a href="#三重积分的轮换对称性" class="headerlink" title="三重积分的轮换对称性"></a>三重积分的轮换对称性</h3><p><img src="https://sfile.chatglm.cn/chatglm4/79f79937-0a3d-43b0-a256-497530af58cf.png?image_process=format,webp"></p><h3 id="eg4"><a href="#eg4" class="headerlink" title="eg4"></a>eg4</h3><p><img src="https://sfile.chatglm.cn/chatglm4/4fdcedbf-f954-4cf2-b074-4073ad904f47.png?image_process=format,webp"></p><h3 id="三重积分的普通对称性"><a href="#三重积分的普通对称性" class="headerlink" title="三重积分的普通对称性"></a>三重积分的普通对称性</h3><p><img src="https://sfile.chatglm.cn/chatglm4/ba9d198d-2144-4251-86f0-c440562715f6.png?image_process=format,webp"></p><h3 id="eg5"><a href="#eg5" class="headerlink" title="eg5"></a>eg5</h3><p><img src="https://sfile.chatglm.cn/chatglm4/498a3d77-70c5-41fc-bc50-135e976bac99.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/cbb07b4b-9596-4d76-a098-4914f55b5c12.png?image_process=format,webp"></p><hr><h2 id="小练习"><a href="#小练习" class="headerlink" title="小练习"></a>小练习</h2><p><img src="https://sfile.chatglm.cn/chatglm4/084cc816-ec4c-4970-b87c-b6932a46c62e.png?image_process=format,webp"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="https://sfile.chatglm.cn/chatglm4/0f02fef8-456d-40b6-8115-3080a22ae0bb.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 积分学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>汽车价格多元线性回归</title>
       <link href="/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
       <url>/2024/05/05/%E6%B1%BD%E8%BD%A6%E4%BB%B7%E6%A0%BC%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
