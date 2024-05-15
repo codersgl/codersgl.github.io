@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>线性方程组</title>
+      <link href="/2024/05/15/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/"/>
+      <url>/2024/05/15/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</url>
+      
+        <content type="html"><![CDATA[<h1 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h1><p><img src="https://sfile.chatglm.cn/chatglm4/406aef0a-a9bc-41db-aeae-c6ca4ea4ad73.png?image_process=format,webp"></p><hr><h1 id="啥是线性方程组"><a href="#啥是线性方程组" class="headerlink" title="啥是线性方程组"></a>啥是线性方程组</h1><p><img src="https://sfile.chatglm.cn/chatglm4/e90ac349-489a-48ae-8cf1-824042f48cc9.png?image_process=format,webp" alt="img"></p><h1 id="方程组解的情况"><a href="#方程组解的情况" class="headerlink" title="方程组解的情况"></a>方程组解的情况</h1><p><img src="https://sfile.chatglm.cn/chatglm4/8db59fda-ea42-43cf-b847-a690275ebf17.png?image_process=format,webp"></p><p><img src="https://sfile.chatglm.cn/chatglm4/4600c720-2e06-4a71-bcb1-538a226b4256.png?image_process=format,webp"></p><h1 id="如何求解方程组"><a href="#如何求解方程组" class="headerlink" title="如何求解方程组"></a>如何求解方程组</h1><p><img src="https://sfile.chatglm.cn/chatglm4/2a295156-2b11-42ab-8f54-b6836d426721.png?image_process=format,webp"></p><ul><li>也有初等列变换，但是初等列变化不是同解变换</li></ul><p><img src="https://sfile.chatglm.cn/chatglm4/fac94418-d400-4123-aa0f-adb9991ff9ac.png?image_process=format,webp"></p><h2 id="行阶梯形矩阵"><a href="#行阶梯形矩阵" class="headerlink" title="行阶梯形矩阵"></a>行阶梯形矩阵</h2><p><img src="https://sfile.chatglm.cn/chatglm4/c3c7575e-72be-4028-b387-ceda62619e20.png?image_process=format,webp"></p><h2 id="行最简型矩阵"><a href="#行最简型矩阵" class="headerlink" title="行最简型矩阵"></a>行最简型矩阵</h2><p><img src="https://sfile.chatglm.cn/chatglm4/8f78e632-1674-4559-874c-d7ae00635074.png?image_process=format,webp"></p><h2 id="秩的定义"><a href="#秩的定义" class="headerlink" title="秩的定义"></a>秩的定义</h2><p><img src="https://sfile.chatglm.cn/chatglm4/2008314b-91bc-4225-acf7-593d91f54fb7.png?image_process=format,webp"></p><h1 id="方程组的求解"><a href="#方程组的求解" class="headerlink" title="方程组的求解"></a>方程组的求解</h1><h2 id="无解"><a href="#无解" class="headerlink" title="无解"></a>无解</h2><ul><li>系数矩阵的秩小于增广矩阵的秩。</li></ul><p><img src="https://sfile.chatglm.cn/chatglm4/169cf10d-2eb9-4b31-9c17-f98a27eed08d.png?image_process=format,webp"></p><h2 id="唯一解"><a href="#唯一解" class="headerlink" title="唯一解"></a>唯一解</h2><ul><li>系数矩阵的秩等于增广矩阵的秩（有解），同时有效方程的个数等于未知数的个数。</li></ul><p><img src="https://sfile.chatglm.cn/chatglm4/334c6175-63c7-4034-b946-ef0258478ea0.png?image_process=format,webp"></p><h2 id="无穷多解："><a href="#无穷多解：" class="headerlink" title="无穷多解："></a>无穷多解：</h2><ul><li>系数矩阵的秩等于增广矩阵的秩（有解），有效方程的个数小于未知数的个数。</li></ul><p><img src="https://sfile.chatglm.cn/chatglm4/370b5c92-f888-4b02-aaf6-b9bcb33907d2.png?image_process=format,webp"></p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img src="https://sfile.chatglm.cn/chatglm4/5e18e7a3-0c03-41b6-a610-f2def478bc2b.png?image_process=format,webp"></p><h1 id="无穷多解的表示问题"><a href="#无穷多解的表示问题" class="headerlink" title="无穷多解的表示问题"></a>无穷多解的表示问题</h1><ul><li>主变量：主元所对应的变量</li><li>自由变量：除了主变量外的所有变量</li></ul><p><img src="https://sfile.chatglm.cn/chatglm4/a79dfab5-a3d9-4a82-a1e5-32a9456228d6.png?image_process=format,webp"></p><h1 id="解方程组流程图"><a href="#解方程组流程图" class="headerlink" title="解方程组流程图"></a>解方程组流程图</h1><p><img src="https://sfile.chatglm.cn/chatglm4/f50f6552-8965-43ae-88d9-4396960ca030.png?image_process=format,webp"></p><h2 id="eg"><a href="#eg" class="headerlink" title="eg"></a>eg</h2><p><img src="https://sfile.chatglm.cn/chatglm4/e69b988e-f5f0-4f5f-9b8e-91f427b7285d.png?image_process=format,webp"></p><h1 id="”齐次“-与-”非齐次“"><a href="#”齐次“-与-”非齐次“" class="headerlink" title="”齐次“ 与 ”非齐次“"></a>”齐次“ 与 ”非齐次“</h1><p><img src="https://sfile.chatglm.cn/chatglm4/84935ed9-e9d7-46f2-9761-11e3e95561c8.png?image_process=format,webp"></p><hr><p><img src="https://sfile.chatglm.cn/chatglm4/696e7372-b4ce-4cd6-8a36-5ad37f2dc340.png?image_process=format,webp"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 矩阵 </tag>
+            
+            <tag> 线性方程组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>克拉默法则</title>
       <link href="/2024/05/15/%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99/"/>
       <url>/2024/05/15/%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99/</url>
